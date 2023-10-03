@@ -7,7 +7,7 @@ const Login=(props)=>
     <div>
      <div className={classes.homepage}>
     <div className={classes.container}>
-    <h1>Welcome to Quizzez</h1>
+    <h1>Welcome to QuizWiz</h1>
     <p>Log into your account!</p>
     <form className={classes.form}>
     <label>E-mail</label>
