@@ -3,7 +3,12 @@ import Input from "../UI/Input";
 import { useState } from "react";
 import OutputBox from "../UI/OutputBox";
 import useForm from "../custom hooks/useFrom";
+import { useNavigate } from "react-router-dom";
 const TeacherRegistration = () => {
+  const navigate = useNavigate();
+  const redirectHandler = () => {
+    navigate("/");
+  };
   const {
     firstname,
     lastname,
@@ -68,6 +73,7 @@ const TeacherRegistration = () => {
 
     if (response.ok) {
       setSubmit(true);
+      setTimeout(redirectHandler, 5000);
     }
   };
 

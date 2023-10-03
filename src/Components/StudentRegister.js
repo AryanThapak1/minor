@@ -3,9 +3,14 @@ import classes from "./StudentRegist.module.css";
 import Input from "../UI/Input";
 import { useState } from "react";
 import OutputBox from "../UI/OutputBox";
+import { useNavigate } from "react-router-dom";
 const StudentRegister = () => {
   const [invalid, setInvalid] = useState(false);
   const [submit, setSubmit] = useState(false);
+  const navigate=useNavigate();
+  const redirectHandler = () => {
+    navigate("/");
+  };
   const {
     firstname,
     lastname,
@@ -65,6 +70,7 @@ const StudentRegister = () => {
 
     if (response.ok) {
       setSubmit(true);
+      setTimeout(redirectHandler, 5000);
     }
   };
 
