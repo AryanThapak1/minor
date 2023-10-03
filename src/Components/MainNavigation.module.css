@@ -2,8 +2,8 @@
 {
     text-align: center;
     width: auto;
-    padding: 0.5rem;
     margin-bottom: 1rem;
+    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -41,6 +41,6 @@
 .img
 {
     height: 4rem;
-    
 }
+
 
