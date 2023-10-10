@@ -62,6 +62,7 @@ body
   display: flex;
   align-items: flex-start;
   justify-content: center;
+  margin-top: 1rem;
 }
 
 .form .button
@@ -80,4 +81,10 @@ body
     color: #ffd43b;
 }
 
+@media (max-width:768px) {
+    *{
+        font-size: 62.5%;
+    }
+    
+}
 

@@ -1,9 +1,13 @@
 import Login from "./Components/Login";
+
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Root from "./Components/Root";
 import SignUp from "./Components/SignUp";
 import TeacherRegistration from "./Components/TeacherRegistration";
 import StudentRegister from "./Components/StudentRegister";
+import HomePage from "./Components/HomePage";
+import NewRoot from "./Components/NewRoot";
+import StudentRoot from "./Components/StudentRoot";
 function App() {
   const router = createBrowserRouter([
     {
@@ -25,6 +29,26 @@ function App() {
         {
           path: "SignUp/Student",
           element: <StudentRegister />,
+        },
+        {
+          path:"Teacher/",
+          element:<NewRoot/>,
+          children:[
+            {
+              path:"Home",
+              element:<HomePage/>
+            }
+          ]
+        },
+        {
+          path:'Student/',
+          element:<StudentRoot/>,
+          children:[
+            {
+              path:'Home',
+              element:<HomePage/>
+            }
+          ]
         }
       ],
     },
