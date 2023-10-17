@@ -7,8 +7,8 @@ import useLogin from "../custom hooks/useLogin";
 const Login = (props) => {
   const {invalid, submitHandler,teacherCheckHandler, userRef, passRef } = useLogin();
   const navigate = useNavigate();
-  const access = localStorage.getItem("access");
-  const type =localStorage.getItem("type");
+  const access = sessionStorage.getItem("token");
+  const type =sessionStorage.getItem("type");
   useEffect(() => {
     if (access) {
       navigate(`/${type}/home`);

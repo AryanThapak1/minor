@@ -4,7 +4,7 @@ const LoginNav=()=>
 {
    const logoutHandler=()=>
    {
-      localStorage.removeItem('access')
+      sessionStorage.removeItem('token')
    }
    return(
     <nav className={classes.LoginBar}>

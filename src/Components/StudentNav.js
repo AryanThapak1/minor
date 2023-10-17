@@ -4,7 +4,8 @@ const StudentNav=()=>
 {
     const logoutHandler=()=>
    {
-      localStorage.removeItem('access')
+      sessionStorage.removeItem('token');               
+      sessionStorage.removeItem('type');
    }
    return(
     <nav className={classes.LoginBar}>

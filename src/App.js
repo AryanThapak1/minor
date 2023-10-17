@@ -8,6 +8,7 @@ import StudentRegister from "./Components/StudentRegister";
 import HomePage from "./Components/HomePage";
 import NewRoot from "./Components/NewRoot";
 import StudentRoot from "./Components/StudentRoot";
+import QuizForm from "./Components/QuizForm";
 function App() {
   const router = createBrowserRouter([
     {
@@ -37,6 +38,10 @@ function App() {
             {
               path:"Home",
               element:<HomePage/>
+            },
+            {
+              path:'manage',
+              element:<QuizForm/>
             }
           ]
         },

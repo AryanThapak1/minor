@@ -23,9 +23,12 @@ const useLogin = () => {
             body: JSON.stringify(credentials)
         });
 
-        if (response.ok) {
-            localStorage.setItem('access', true);
-            localStorage.setItem('type',type);
+        const data=await response.json();
+        const token=data.token;
+
+        if (token) {
+            sessionStorage.setItem('token', token);
+            sessionStorage.setItem('type',type);
             navigate(`/${type}/Home`);
         } else {
             setInvalid(true);
